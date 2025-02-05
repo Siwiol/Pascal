@@ -1,0 +1,81 @@
+.container {
+  max-width: 1728px;
+  min-width: 365px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: #000000;
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 36px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.code {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+}
+.button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  background-color: #000000;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #333333;
+  }
+
+  &:active {
+    background-color: #1a1a1a;
+  }
+}
+
+.tasks-answer {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tableHeader {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tableRow:hover {
+  background-color: #ddd;
+}
+
+.tableCell {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
