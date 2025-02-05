@@ -7,7 +7,8 @@
 Руководитель проекта: Озерова Екатерина Андреевна
 
 Для запуска проекта необходимо ввести следующие команды: 
-1. npm install
-2. npm run build
-3. npm start
+1. cd pas
+2. npm install
+3. npm run build
+4. npm start
 
