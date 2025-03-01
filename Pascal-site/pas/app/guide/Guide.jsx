@@ -144,7 +144,7 @@ until x = 0;
             `}
           </code>
         </pre>
-
+        <iframe width="760" height="515" src="https://www.youtube.com/embed/mONF9U5JEkg?si=zG84w85zoq1wCTI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h3 className={Styles["subtitle"]}>2.5. Процедуры и функции</h3>
         <p className={Styles["description"]}>
           PascalABC.NET позволяет создавать собственные процедуры и функции.
@@ -195,6 +195,7 @@ end;
             `}
           </code>
         </pre>
+        <iframe width="760" height="515" src="https://www.youtube.com/embed/Y_OR66wNDMw?si=Q3zclLrigdzFA4Co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
 
       <section className={Styles["section"]}>
@@ -206,6 +207,11 @@ end;
           делает его отличным выбором для начинающих и опытных программистов.
         </p>
       </section>
+      <section className={Styles["section"]}>
+      <h2 className={Styles["sectionTitle"]}> Видео разбор задания №6</h2>
+      <iframe width="760" height="515" src="https://www.youtube.com/embed/7qmg7--zvq8?si=ZVuStv_KM61rmKwa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </section>
+      
       <h1 className={Styles["title"]}>Критерии оценивания 16 задачи</h1>
       <p className={Styles["description"]}>
         Заголовок таблицы: Критерии оценивания выполнения задания.
