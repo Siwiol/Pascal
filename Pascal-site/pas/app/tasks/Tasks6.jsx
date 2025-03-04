@@ -3,15 +3,18 @@ import { useState } from "react";
 import Styles from "./Tasks.module.css";
 
 export const Tasks6 = () => {
-
   const [visibleAnswers, setVisibleAnswers] = useState({
     task1: false,
     task2: false,
     task3: false,
     task4: false,
     task5: false,
+    task6: false,
+    task7: false,
+    task8: false,
+    task9: false,
+    task10: false,
   });
-
 
   const handleButtonClick = (taskId) => {
     setVisibleAnswers((prev) => ({
@@ -63,6 +66,29 @@ export const Tasks6 = () => {
           "Ответ:"
         )}
       </button>
+      <button
+        className={`button ${Styles["tasks__button"]}`}
+        onClick={() => handleButtonClick("task6")}
+      >
+        {visibleAnswers.task6 ? (
+          <span className={Styles["tasks-decision"]}>
+            Программа выводит «YES», если хотя бы одно из чисел `s` или `t`
+            больше 12. Рассмотрим все пары чисел: <br />
+            1. (1, 13) — t {">"} 12 → YES. <br />
+            2. (14, 2) — s {">"} 12 → YES. <br />
+            3. (1, 12) — оба числа {"<="} 12 → NO. <br />
+            4. (11, 12) — оба числа {"<="} 12 → NO. <br />
+            5. (–14, –14) — оба числа {"<="} 12 → NO. <br />
+            6. (–11, 13) — t {">"} 12 → YES. <br />
+            7. (–4, 11) — оба числа {"<="} 12 → NO. <br />
+            8. (2, 9) — оба числа {"<="} 12 → NO. <br />
+            9. (8, 6) — оба числа {"<="} 12 → NO. <br />
+            Итого: Программа напечатала «YES» в 3 случаях.
+          </span>
+        ) : (
+          "Решение:"
+        )}
+      </button>
       <p className={Styles["description"]}>
         Ниже приведена программа, записанная на языке программирования Pascal:
       </p>
@@ -98,9 +124,33 @@ export const Tasks6 = () => {
         onClick={() => handleButtonClick("task2")}
       >
         {visibleAnswers.task2 ? (
-          <span className={Styles["tasks-answer"]}>4</span>
+          <span className={Styles["tasks-answer"]}>7</span>
         ) : (
           "Ответ:"
+        )}
+      </button>
+      <button
+        className={`button ${Styles["tasks__button"]}`}
+        onClick={() => handleButtonClick("task7")}
+      >
+        {visibleAnswers.task7 ? (
+          <span className={Styles["tasks-decision"]}>
+            Программа выводит «YES», если хотя бы одно из чисел s или t
+            удовлетворяет условию: <br />s {">"} 4 или <br />t {">"} 2. <br />
+            Рассмотрим все пары чисел: <br />
+            (3, –3) — оба числа не удовлетворяют условию → NO. <br />
+            (7, 6) — оба числа удовлетворяют условию → YES. <br />
+            (–4, 1) — оба числа не удовлетворяют условию → NO. <br />
+            (2, 9) — t {">"} 2 → YES. <br />
+            (12, 7) — оба числа удовлетворяют условию → YES. <br />
+            (–11, 4) — t {">"} 2 → YES. <br />
+            (–8, 13) — t {">"} 2 → YES. <br />
+            (10, 9) — оба числа удовлетворяют условию → YES. <br />
+            (6, 5) — оба числа удовлетворяют условию → YES. <br />
+            Итого: Программа напечатала «YES» в 7 случаях.
+          </span>
+        ) : (
+          "Решение:"
         )}
       </button>
       <p className={Styles["description"]}>
@@ -143,6 +193,30 @@ export const Tasks6 = () => {
           "Ответ:"
         )}
       </button>
+      <button
+        className={`button ${Styles["tasks__button"]}`}
+        onClick={() => handleButtonClick("task8")}
+      >
+        {visibleAnswers.task8 ? (
+          <span className={Styles["tasks-decision"]}>
+            Программа выводит «YES», если хотя бы одно из чисел s или t
+            удовлетворяет условию: <br />s {"<"} 5 или <br />t {">"} 5. <br />
+            Рассмотрим все пары чисел: <br />
+            (2, 5) — s {"<"} 5 → YES. <br />
+            (5, 2) — оба числа не удовлетворяют условию → NO. <br />
+            (4, 4) — s {"<"} 5 → YES. <br />
+            (2, –2) — s {"<"} 5 → YES. <br />
+            (3, 1) — s {"<"} 5 → YES. <br />
+            (8, 3) — оба числа не удовлетворяют условию → NO. <br />
+            (9, –7) — оба числа не удовлетворяют условию → NO. <br />
+            (7, 7) — t {">"} 5 → YES. <br />
+            (4, 6) — s {"<"} 5 → YES. <br />
+            Итого: Программа напечатала «YES» в 6 случаях. <br />
+          </span>
+        ) : (
+          "Решение:"
+        )}
+      </button>
       <p className={Styles["description"]}>
         Ниже приведена программа, записанная на языке программирования Pascal:
       </p>
@@ -183,6 +257,30 @@ export const Tasks6 = () => {
           "Ответ:"
         )}
       </button>
+      <button
+        className={`button ${Styles["tasks__button"]}`}
+        onClick={() => handleButtonClick("task9")}
+      >
+        {visibleAnswers.task9 ? (
+          <span className={Styles["tasks-decision"]}>
+            Программа выводит «ДА», если результат целочисленного деления s на 2
+            равен k (т.е. s div 2 = k). <br />
+            Рассмотрим все пары чисел: <br />
+            (1, 1) — 1÷2=0 (не равно 1) → НЕТ. <br />
+            (8, 4) — 8÷2=4 → ДА. <br />
+            (14, 10) — 14÷2=7 (не равно 10) → НЕТ. <br />
+            (20, 1) — 20÷2=10 (не равно 1) → НЕТ. <br />
+            (7, 3) — 7÷2=3 → ДА. <br />
+            (10, 5) — 10÷2=5 → ДА. <br />
+            (10, 2) — 10÷2=5 (не равно 2) → НЕТ. <br />
+            (4, 1) — 4÷2=2 (не равно 1) → НЕТ. <br />
+            (1, 0) — 1÷2=0 → ДА. <br />
+            Итого: Программа напечатала «ДА» в 4 случаях.
+          </span>
+        ) : (
+          "Решение:"
+        )}
+      </button>
       <p className={Styles["description"]}>
         Ниже приведена программа, записанная на языке программирования Pascal:
       </p>
@@ -221,6 +319,31 @@ export const Tasks6 = () => {
           <span className={Styles["tasks-answer"]}>2</span>
         ) : (
           "Ответ:"
+        )}
+      </button>
+      <button
+        className={`button ${Styles["tasks__button"]}`}
+        onClick={() => handleButtonClick("task10")}
+      >
+        {visibleAnswers.task10 ? (
+          <span className={Styles["tasks-decision"]}>
+            Программа выводит «NO», если ни одно из чисел s или t не
+            удовлетворяет условию: <br />s {">"} -3 или <br />t {">"} 5. <br />
+            Рассмотрим все пары чисел: <br />
+            (–3, 5) — t {">"} 5 не выполняется, s {">"} -3 не выполняется → NO.
+            <br />
+            (–2, 2) — s {">"} -3 → YES. <br />
+            (–1, –3) — s {">"} -3 → YES. <br />
+            (1, 0) — s {">"} -3 → YES. <br />
+            (–4, –7) — оба числа не удовлетворяют условию → NO. <br />
+            (2, 3) — s {">"} -3 → YES. <br />
+            (3, 5) — s {">"} -3 → YES. <br />
+            (5, –3) — s {">"} -3 → YES. <br />
+            (6, –7) — s {">"} -3 → YES. <br />
+            Итого: Программа напечатала «NO» в 2 случаях.
+          </span>
+        ) : (
+          "Решение:"
         )}
       </button>
     </div>

@@ -144,7 +144,6 @@ until x = 0;
             `}
           </code>
         </pre>
-        <iframe width="760" height="515" src="https://www.youtube.com/embed/mONF9U5JEkg?si=zG84w85zoq1wCTI2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h3 className={Styles["subtitle"]}>2.5. Процедуры и функции</h3>
         <p className={Styles["description"]}>
           PascalABC.NET позволяет создавать собственные процедуры и функции.
@@ -172,9 +171,144 @@ end;
           </code>
         </pre>
       </section>
+      <section className={Styles["section"]}>
+        <h2 className={Styles["sectionTitle"]}>3. Сложные условия</h2>
+        <p className={Styles["description"]}>
+          В языке программирования Pascal сложные условия создаются с помощью
+          логических операторов, которые позволяют комбинировать несколько
+          условий в одно. Это полезно, когда нужно проверить несколько условий
+          одновременно или выполнить определённые действия в зависимости от их
+          комбинации. Основные логические операторы в Pascal:
+        </p>
+        <h3 className={Styles["subtitle"]}>3.1. Логические операторы</h3>
+        <ul className={Styles["list"]}>
+          <li>
+            <code>and</code> (И): Возвращает <code>True</code>, если оба условия
+            истинны.
+          </li>
+          <li>
+            <code>or</code> (ИЛИ): Возвращает <code>True</code>, если хотя бы
+            одно из условий истинно.
+          </li>
+          <li>
+            <code>not</code> (НЕ): Инвертирует значение условия.
+          </li>
+        </ul>
+        <h3 className={Styles["subtitle"]}>3.2. Примеры сложных условий</h3>
+        <p className={Styles["description"]}>
+          Пример проверки диапазона числа:
+        </p>
+        <pre className={Styles["code"]}>
+          <code>
+            {`
+if (x >= 10) and (x <= 20) then
+  WriteLn('x находится в диапазоне от 10 до 20');
+            `}
+          </code>
+        </pre>
+        <p className={Styles["description"]}>
+          Пример использования <code>or</code>:
+        </p>
+        <pre className={Styles["code"]}>
+          <code>
+            {`
+if (a > 0) or (b < 0) then
+  WriteLn('Хотя бы одно условие истинно');
+            `}
+          </code>
+        </pre>
+        <p className={Styles["description"]}>
+          Пример использования <code>not</code>:
+        </p>
+        <pre className={Styles["code"]}>
+          <code>
+            {`
+if not (x = 0) then
+  WriteLn('x не равно 0');
+            `}
+          </code>
+        </pre>
+
+        <h3 className={Styles["subtitle"]}>3.3. Приоритет операторов</h3>
+        <p className={Styles["description"]}>
+          В Pascal логические операторы имеют определённый порядок выполнения
+          (приоритет):
+        </p>
+        <ul className={Styles["list"]}>
+          <li>
+            <code>not</code> (наивысший приоритет).
+          </li>
+          <li>
+            <code>and</code>.
+          </li>
+          <li>
+            <code>or</code> (наименьший приоритет).
+          </li>
+        </ul>
+        <p className={Styles["description"]}>
+          Если нужно изменить порядок выполнения, используйте скобки:
+        </p>
+        <pre className={Styles["code"]}>
+          <code>
+            {`
+if (a > 0) and ((b < 0) or (c = 10)) then
+  WriteLn('Сложное условие');
+            `}
+          </code>
+        </pre>
+
+        <h3 className={Styles["subtitle"]}>3.4. Вложенные условия</h3>
+        <p className={Styles["description"]}>
+          Иногда условия могут быть вложенными, чтобы проверить более сложные
+          сценарии:
+        </p>
+        <pre className={Styles["code"]}>
+          <code>
+            {`
+if a > 0 then
+begin
+  if b < 0 then
+    WriteLn('a > 0 и b < 0')
+  else
+    WriteLn('a > 0, но b >= 0');
+end
+else
+  WriteLn('a <= 0');
+            `}
+          </code>
+        </pre>
+
+        <h3 className={Styles["subtitle"]}>
+          3.5. Пример программы с сложными условиями
+        </h3>
+        <p className={Styles["description"]}>
+          Пример программы, которая проверяет знаки двух чисел:
+        </p>
+        <pre className={Styles["code"]}>
+          <code>
+            {`
+var
+  a, b: integer;
+begin
+  WriteLn('Введите два числа:');
+  ReadLn(a, b);
+
+  if (a > 0) and (b > 0) then
+    WriteLn('Оба числа положительные')
+  else if (a < 0) and (b < 0) then
+    WriteLn('Оба числа отрицательные')
+  else if (a = 0) or (b = 0) then
+    WriteLn('Хотя бы одно число равно нулю')
+  else
+    WriteLn('Числа имеют разные знаки');
+end.
+            `}
+          </code>
+        </pre>
+      </section>
 
       <section className={Styles["section"]}>
-        <h2 className={Styles["sectionTitle"]}>3. Работа с массивами</h2>
+        <h2 className={Styles["sectionTitle"]}>4. Работа с массивами</h2>
         <p className={Styles["description"]}>Объявление массива:</p>
         <pre className={Styles["code"]}>
           <code>
@@ -195,11 +329,10 @@ end;
             `}
           </code>
         </pre>
-        <iframe width="760" height="515" src="https://www.youtube.com/embed/Y_OR66wNDMw?si=Q3zclLrigdzFA4Co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
 
       <section className={Styles["section"]}>
-        <h2 className={Styles["sectionTitle"]}>4. Заключение</h2>
+        <h2 className={Styles["sectionTitle"]}>5. Заключение</h2>
         <p className={Styles["description"]}>
           PascalABC.NET является мощным инструментом для изучения
           программирования и подготовки к ОГЭ по информатике. Он сочетает в себе
@@ -208,10 +341,9 @@ end;
         </p>
       </section>
       <section className={Styles["section"]}>
-      <h2 className={Styles["sectionTitle"]}> Видео разбор задания №6</h2>
-      <iframe width="760" height="515" src="https://www.youtube.com/embed/7qmg7--zvq8?si=ZVuStv_KM61rmKwa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2 className={Styles["sectionTitle"]}> Видео разбор задания №6</h2>
       </section>
-      
+
       <h1 className={Styles["title"]}>Критерии оценивания 16 задачи</h1>
       <p className={Styles["description"]}>
         Заголовок таблицы: Критерии оценивания выполнения задания.
